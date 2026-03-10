@@ -1,0 +1,25 @@
+server:
+  port: 8081 # Usaremos el 8081 para dejar libre el 8080 al otro microservicio
+
+spring:
+  application:
+    name: tracker-service
+
+  # 1. Conexión a PostgreSQL
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tracker_db
+    username: tracker_user
+    password: tracker_pass
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+  # 2. Conexión a RabbitMQ
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: admin
+    password: admin123
