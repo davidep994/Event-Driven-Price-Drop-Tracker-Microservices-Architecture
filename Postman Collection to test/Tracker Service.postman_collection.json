@@ -1,0 +1,95 @@
+{
+  "info": {
+    "_postman_id": "242e99b5-6d8e-46e1-8f65-ed9276dc4f0a",
+    "name": "Tracker Service",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48505735"
+  },
+  "item": [
+    {
+      "name": "Create Product",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"name\": \"PlayStation 5 Pro\",\r\n    \"currentPrice\": 800.00\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8081/api/products",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "products"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Price Lowered",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/products/1/price?newPrice=650.00",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "products",
+            "1",
+            "price"
+          ],
+          "query": [
+            {
+              "key": "newPrice",
+              "value": "650.00"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Price Lowered 2",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8081/api/products/1/price?newPrice=499.99",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8081",
+          "path": [
+            "api",
+            "products",
+            "1",
+            "price"
+          ],
+          "query": [
+            {
+              "key": "newPrice",
+              "value": "499.99"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
